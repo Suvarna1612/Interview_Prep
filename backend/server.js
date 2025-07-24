@@ -29,6 +29,9 @@ app.use(
 app.use(express.json());
 
 // Routes
+app.get('/test', (req,res) => {
+  res.send("Hello");
+});
 app.use('/api/auth', authRoutes);
 app.use('/api/sessions', sessionRoutes);
 app.use('/api/questions', questionRoutes);
